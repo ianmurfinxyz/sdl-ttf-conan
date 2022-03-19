@@ -1,0 +1,10 @@
+add_library(SDL_ttf STATIC
+	SDL_ttf.c
+)
+
+set_target_properties(SDL_ttf PROPERTIES DEBUG_POSTFIX d)
+
+target_link_libraries(SDL_ttf
+	CONAN_PKG::freetype
+	CONAN_PKG::sdl
+)
